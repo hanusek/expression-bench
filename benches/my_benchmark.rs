@@ -1,5 +1,4 @@
 use criterion::{criterion_group, criterion_main, Criterion};
-//use lazy_static::lazy_static;
 
 use exmex::{BinOp, Operator};
 use exmex::FlatEx;
@@ -43,8 +42,8 @@ fn ex_bitand_benchmark(c: &mut Criterion)
 
    use evals_tests::{fast_eval, eval_expr};
 
-   c.bench_function("fast_eval_2", |b| b.iter(|| { fast_eval("128&&4") }));
-   c.bench_function("eval_expr_2", |b| b.iter(|| { eval_expr("bitand(128, 4)") }));
+   c.bench_function("fast_eval", |b| b.iter(|| { fast_eval("128&&4") }));
+   c.bench_function("eval_expr", |b| b.iter(|| { eval_expr("bitand(128, 4)") }));
 
 }
 
