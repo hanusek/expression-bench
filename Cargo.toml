@@ -1,0 +1,23 @@
+[package]
+name = "evals-tests"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+fasteval = "0.2.4"
+evalexpr = { git = "https://github.com/ISibboI/evalexpr.git", branch = "88_bitwise_operators" }
+exmex = "0.9.4"
+
+[dev-dependencies]
+criterion = "0.3"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "mybin"
+path = "src/main.rs"
+
+[[bench]]
+name = "my_benchmark"
+harness = false
